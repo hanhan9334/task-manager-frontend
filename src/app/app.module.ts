@@ -12,6 +12,7 @@ import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { WebReqInterceptor } from './web-req.interceptor';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { WebReqInterceptor } from './web-req.interceptor';
     TaskViewComponent,
     NewListComponent,
     NewTaskComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
