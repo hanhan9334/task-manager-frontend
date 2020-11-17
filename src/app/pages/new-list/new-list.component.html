@@ -1,0 +1,17 @@
+<div class="centered-content">
+    <div class="modal-box has-background-light">
+        <h1 class="title">
+            Create a new list
+        </h1>
+
+        <input #listTitleInput class="input is-medium" type="text" placeholder="Title">
+        <br><br>
+        <div class="buttons is-right">
+            <button class="button" routerLink="/">Back</button>
+            <button class="button is-primary has-text-white"
+                (click)="createNewList(listTitleInput.value)">Create</button>
+
+        </div>
+
+    </div>
+</div>
