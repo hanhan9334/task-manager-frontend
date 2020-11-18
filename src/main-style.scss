@@ -15,7 +15,7 @@ $dark-green:rgb(0,100,80);
 //Update Bulma's global variables
 $PRIMARY: $green;
 
-$link:$light-green;
+$link:$turqoise;
 
 //Update some of Bulma's component variables
 $control-border-width:2px;
@@ -62,4 +62,14 @@ html,body{
     font-size: 1.5em;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.white-box{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
 }

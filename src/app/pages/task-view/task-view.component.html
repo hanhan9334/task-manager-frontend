@@ -21,17 +21,59 @@
 
         </div>
         <div class=" tasks-list-container has-background-light">
-            <h1 class="title has-text-primary">
-                Tasks
-            </h1>
-            <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)"
-                [ngClass]="{'complete': task.completed}">
-                <p>{{task.title}}</p>
+            <div class="top-bar">
+                <h1 class="title has-text-primary">
+                    Tasks
+                </h1>
+
+
+
+                <div class="dropdown is-right is-hoverable">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                            <span class="icon is-small">
+                                <i class="fas fa-cog" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                        <div class="dropdown-content">
+                            <a [routerLink]="['/edit-list',selectedListId]" class="dropdown-item">
+                                Edit
+                            </a>
+                            <a (click)="onDeleteListClick()" class="dropdown-item">
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="task" *ngFor="let task of tasks">
+                <p>{{task.title}}</p>
+
+                <div class="task-buttons">
+
+                    <button class="button is-small" [routerLink]="['/lists',selectedListId,'edit-task',task._id]">
+                        <div class="icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                    </button>
+                    <button class="button is-small is-danger" (click)="onDeleteTaskClick(task._id)"
+                        style="margin-left: 10px;">
+                        <div class="icon">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
 
             <button class="circle-add-button button is-primary" routerLink="./new-task">
                 <p>+</p>
             </button>
+
         </div>
     </div>
 </div>
