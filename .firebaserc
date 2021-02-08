@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "task-manager-angular-3aa26": {
+      "hosting": {
+        "frontend": [
+          "task-manager-angular-3aa26"
+        ]
+      }
+    }
+  }
+}
